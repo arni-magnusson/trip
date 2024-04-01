@@ -23,32 +23,25 @@ flights$Distance <- with(flights, round(geodist(Nfrom, Efrom, Nto, Eto)))
 flights$Value <- round(flights$Distance / flights$Cost)
 flights$Speed <- round(flights$Distance / deg2num(flights$Duration), -1)
 
-## Move selected cities 360 degrees
-homebound <- tail(cities$Airport, -which(cities$Airport=="SEA"))
-cities$Longitude[cities$Airport %in% homebound] <-
-  cities$Longitude[cities$Airport %in% homebound] - 360
-flights$Efrom[flights$From %in% homebound] <-
-  flights$Efrom[flights$From %in% homebound] - 360
-flights$Eto[flights$To %in% c(homebound,"NOU")] <-
-  flights$Eto[flights$To %in% c(homebound,"NOU")] - 360
-
 ## Create a second Noumea to return to
 cities <- rbind(cities, cities[cities$City == "Noumea",])
-cities$Longitude[nrow(cities)] <- cities$Longitude[nrow(cities)] - 360
 
 # Calculate nights in each city
 cities$Arrive <- flights$ArriveDate[match(cities$Airport, flights$To)]
 cities$Depart <- flights$Date[match(cities$Airport, flights$From)]
-cities$Arrive[1] <- min(cities$Arrive)             # Noumea start
-cities$Depart[nrow(cities)] <- max(cities$Depart)  # Noumea end
-cities$Depart[cities$City=="Athens"] <- "2022-12-18"  # Athens
-cities$Depart[cities$City=="Hanoi"] <- "2023-01-12"   # Hanoi
+cities$Arrive[1] <- min(cities$Arrive, na.rm=TRUE)             # Noumea start
+cities$Depart[nrow(cities)] <- max(cities$Depart, na.rm=TRUE)  # Noumea end
 cities$Stay <- as.integer(as.Date(cities$Depart) - as.Date(cities$Arrive))
+cities$Stay[cities$City == "Singapore"] <- 0  # fly after midnight
 
 ## Calculate flight layover
-connecting <- c(flights$Date[-1] == flights$ArriveDate[-nrow(flights)], FALSE)
-layover <- num2deg(c(deg2num(flights$TakeOff[-1]) -
-                     deg2num(flights$Landing[-nrow(flights)]), 0), zero=TRUE)
+flights$Date <- as.Date(flights$Date)
+flights$ArriveDate <- as.Date(flights$ArriveDate)
+connecting <- c(flights$Date[-1] - flights$ArriveDate[-nrow(flights)] <= 1,
+                FALSE)
+takeoff <- as.POSIXct(paste(flights$Date, flights$TakeOff))
+landing <- as.POSIXct(paste(flights$ArriveDate, flights$Landing))
+layover <- num2deg(takeoff[-1] - landing[-nrow(flights)], zero=TRUE)
 layover <- sub(":00$", "", layover)
 flights$Layover <- ifelse(connecting, layover, "")
 
