@@ -23,13 +23,17 @@ flights$Distance <- with(flights, round(geodist(Nfrom, Efrom, Nto, Eto)))
 flights$Value <- round(flights$Distance / flights$Cost)
 flights$Speed <- round(flights$Distance / deg2num(flights$Duration), -1)
 
-## Create a second Noumea to return to
+## Create a second Auckland and Noumea to return to
+cities <- rbind(cities, cities[cities$City == "Auckland",])
 cities <- rbind(cities, cities[cities$City == "Noumea",])
 
 # Calculate nights in each city
 cities$Arrive <- flights$ArriveDate[match(cities$Airport, flights$To)]
 cities$Depart <- flights$Date[match(cities$Airport, flights$From)]
 cities$Arrive[1] <- min(cities$Arrive, na.rm=TRUE)             # Noumea start
+cities$Arrive[cities$Airport=="AKL"][2] <-
+  flights$ArriveDate[flights$To=="AKL"][2]                     # 2nd time in AKL
+cities$Depart[cities$Airport=="AKL"][2] <- flights$Date[flights$From=="AKL"][2]
 cities$Depart[nrow(cities)] <- max(cities$Depart, na.rm=TRUE)  # Noumea end
 cities$Stay <- as.integer(as.Date(cities$Depart) - as.Date(cities$Arrive))
 cities$Stay[cities$City == "Singapore"] <- 0  # fly after midnight
