@@ -1,7 +1,8 @@
 library(TAF)
 library(rmarkdown)
 
-sourceTAF("report_map.R")
-sourceTAF("report_tables.R")
+source.taf("report_map.R")
+source.taf("report_plots.R")
+source.taf("report_tables.R")
 render("report.Rmd")
-sourceTAF("report_www.R")
+source.taf("report_www.R")
