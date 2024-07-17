@@ -1,6 +1,6 @@
 ## Prepare formatted tables
 
-## Before: cities.csv, flights.csv (data) (output)
+## Before: cities.csv, flights.csv (output)
 ## After:  cities.csv, flights.csv (report)
 
 library(TAF)
