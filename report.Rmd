@@ -11,7 +11,7 @@ source("utilities.R")  # drawmap
 library(TAF)
 ```
 
-```{r, fig.width=14, fig.height=5}
+```{r, fig.width=14, fig.height=9}
 cities <- read.taf("output/cities.csv")
 flights <- read.taf("output/flights.csv")
 drawmap(flights, cities)
