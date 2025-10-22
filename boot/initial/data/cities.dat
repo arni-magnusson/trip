@@ -1,13 +1,11 @@
-"Airport"  "City"         "Latitude"    "Longitude"  "Population"  "GDPcapita"  "Temperature"  "RainyDays"  "RainMM"
-"NOU"      "Noumea"       "22:16:33S"  "166:27:29E"           94           34             21            9        70
-"SIN"      "Singapore"    "01:17:00N"  "103:50:00E"         5918           88             28           14       147
-"DXB"      "Dubai"        "25:15:47N"   "55:17:50E"         3604           51             36            0         1
-"CPH"      "Copenhagen"   "55:40:34N"   "12:34:06E"          661           71             18           12        61
-"KEF"      "Reykjavik"    "64:08:48N"   "21:56:24W"          140           79             12           10        50
-"AMS"      "Amsterdam"    "52:22:22N"   "04:53:37E"          921           62             18           11        82
-"TBS"      "Tbilisi"      "41:43:21N"   "44:47:33E"         1242            8             25            8         5
-"DOH"      "Doha"         "25:17:12N"   "51:32:00E"         1186           82             36            0         0
-"MNL"      "Manila"       "14:35:45N"  "120:58:38E"         1847            4             31           19       476
-"SYD"      "Sydney"       "33:52:04S"  "151:12:36E"         5450           63             14            6        75
-"AKL"      "Auckland"     "36:50:26S"  "174:44:24E"         1479           48             16           13       105
-"ZQN"      "Queenstown"   "45:01:52S"  "168:39:45E"           29           48              8            8        67
+"Airport"  "City"          "Latitude"   "Longitude"  "Population"  "GDPcapita"  "Temperature"  "RainyDays"  "RainMM"
+"NOU"      "Noumea"       "22:16:33S"  "166:27:29E"           94           34             29           10       107
+"AKL"      "Auckland"     "36:50:26S"  "174:44:24E"         1530           46             24            7        58
+"LAX"      "Los Angeles"  "34:03:21N"  "118:14:23W"         3899           87             20            6        63
+"SJO"      "San José"      "9:55:57N"   "84:04:48W"          352           21             28            8        34
+"MDE"      "Medellín"      "6:13:51N"   "75:35:26W"         2427            9             27           11       244
+"BOG"      "Bogotá"        "4:42:40N"   "74:04:20W"         8035           10             20            8        61
+"LIM"      "Lima"         "12:03:36S"   "77:02:15W"        10092           21             24            0         0
+"SCL"      "Santiago"     "33:26:18S"   "70:39:03W"         6999           17             30            0         0
+"YUL"      "Montreal"     "45:30:32N"   "73:33:15W"         1763           34             -8           16        66
+"YYZ"      "Toronto"      "43:39:09N"   "79:22:54W"         3273           52              1           13        54
