@@ -24,7 +24,7 @@ names(flights)[names(flights)=="Landing"] <- "Arrive"
 cities <- cities[cities$Stay > 0,]
 cities <- cities[c("Arrive", "City", "Stay")]
 cities$Arrive <- format(as.Date(cities$Arrive), "%a %d %b")
-cities$Stay <- paste(cities$Stay, "nights")
+cities$Stay <- paste(cities$Stay, ifelse(cities$Stay == 1, "night", "nights"))
 
 ## Save as TAF tables
 write.taf(cities, dir="report")

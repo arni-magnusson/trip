@@ -1,7 +1,7 @@
-## Prepare map
+# Prepare map
 
-## Before: cities.csv, flights.csv (output)
-## After:  map.pdf, map.svg (report)
+# Before: cities.csv, flights.csv (output)
+# After:  map.pdf, map.svg (report)
 
 library(TAF)
 
