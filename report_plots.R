@@ -1,7 +1,7 @@
-## Plots
+# Produce plots
 
-## Before: cities.csv (output)
-## After:  temperature.png (report)
+# Before: cities.csv (output)
+# After:  temperature.png (report)
 
 library(TAF)
 

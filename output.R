@@ -1,7 +1,7 @@
-## Extract results of interest, write TAF output tables
+# Extract results of interest, write CSV output tables
 
-## Before: cities.csv, flights.csv (model)
-## After:  cities.csv, flights.csv (output)
+# Before: cities.csv, flights.csv (model)
+# After:  cities.csv, flights.csv (output)
 
 library(TAF)
 

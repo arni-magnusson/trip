@@ -1,4 +1,4 @@
-# Prepare map
+# Produce map
 
 # Before: cities.csv, flights.csv (output)
 # After:  map.pdf, map.svg (report)
