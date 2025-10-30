@@ -12,7 +12,10 @@ cities <- read.taf("output/cities.csv")
 flights <- read.taf("output/flights.csv")
 
 # Format flights
-flights$Notes <- ifelse(flights$Date == flights$ArriveDate, "", "+1 day")
+flights$Notes <- paste0("+", as.Date(flights$ArriveDat) - as.Date(flights$Date),
+                        " days")
+flights$Notes[flights$Notes == "+0 days"] <- ""
+flights$Notes[flights$Notes == "+1 days"] <- "+1 day"
 flights$Date <- format(as.Date(flights$Date), "%a %d %b")
 flights$From <- cities$City[match(flights$From, cities$Airport)]
 flights$To <- cities$City[match(flights$To, cities$Airport)]
