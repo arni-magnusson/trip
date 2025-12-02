@@ -1,11 +1,14 @@
-"Airport"  "City"          "Latitude"   "Longitude"  "Population"  "GDPcapita"  "Temperature"  "RainyDays"  "RainMM"
-"NOU"      "Noumea"       "22:16:33S"  "166:27:29E"           94           34             29           10       107
-"AKL"      "Auckland"     "36:50:26S"  "174:44:24E"         1530           46             24            7        58
-"LAX"      "Los Angeles"  "34:03:21N"  "118:14:23W"         3899           87             20            6        63
-"SJO"      "San José"      "9:55:57N"   "84:04:48W"          352           21             28            8        34
-"MDE"      "Medellín"      "6:13:51N"   "75:35:26W"         2427            9             27           11       244
-"BOG"      "Bogotá"        "4:42:40N"   "74:04:20W"         8035           10             20            8        61
-"LIM"      "Lima"         "12:03:36S"   "77:02:15W"        10092           21             24            0         0
-"SCL"      "Santiago"     "33:26:18S"   "70:39:03W"         6999           17             30            0         0
-"YUL"      "Montréal"     "45:30:32N"   "73:33:15W"         1763           34             -8           16        66
-"YYZ"      "Toronto"      "43:39:09N"   "79:22:54W"         3273           52              1           13        54
+"Airport"  "City"           "Latitude"   "Longitude"  "Population"  "GDPcapita"  "Temperature"  "RainyDays"  "RainMM"
+"NOU"      "Noumea"        "22:16:33S"  "166:27:29E"           94           34             29           10       107
+"AKL"      "Auckland"      "36:50:26S"  "174:44:24E"         1530           46             24            7        58
+"LAX"      "Los Angeles"   "34:03:21N"  "118:14:23W"         3899           87             20            6        63
+"SJO"      "San José"       "9:55:57N"   "84:04:48W"          352           21             28            8        34
+"MDE"      "Medellín"       "6:13:51N"   "75:35:26W"         2427            9             27           11       244
+"BOG"      "Bogotá"         "4:42:40N"   "74:04:20W"         8035           10             20            8        61
+"LIM"      "Lima"          "12:03:36S"   "77:02:15W"        10092           21             24            0         0
+"SCL"      "Santiago"      "33:26:18S"   "70:39:03W"         6999           17             30            0         0
+"CJC"      "Calama"        "22:27:38S"   "68:55:37W"          148           17             16            0         0
+"CPP"      "Concepción"    "36:49:42S"   "73:03:05W"          224           17             17            1        10
+"PMC"      "Puerto Montt"  "41:28:17S"   "72:56:25W"          246           17             14           10        77
+"YUL"      "Montréal"      "45:30:32N"   "73:33:15W"         1763           34             -8           16        66
+"YYZ"      "Toronto"       "43:39:09N"   "79:22:54W"         3273           52              1           13        54
