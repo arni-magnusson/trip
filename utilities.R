@@ -12,7 +12,7 @@ drawmap <- function(flights, cities)
   world2 <- rbind(world, transform(world, long=long+360, group=group+10000L))
 
   par(plt=c(0.01,0.99,0.02,0.98))
-  plot(NA, xlim=c(115,345), ylim=c(-47,68), ann=FALSE, axes=FALSE)
+  plot(NA, xlim=c(115,345), ylim=c(-52,68), ann=FALSE, axes=FALSE)
   map <- lapply(split(world2, world2$group), polygon, border="white", lwd=0.4,
                 col="olivedrab4")
 
