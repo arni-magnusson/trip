@@ -1,5 +1,5 @@
 "Airport"  "City"           "Latitude"   "Longitude"  "Population"  "GDPcapita"  "Temperature"  "RainyDays"  "RainMM"
-"NOU"      "Noumea"        "22:16:33S"  "166:27:29E"           94           34             29           10       107
+"NOU"      "Nouméa"        "22:16:33S"  "166:27:29E"           94           34             29           10       107
 "AKL"      "Auckland"      "36:50:26S"  "174:44:24E"         1530           46             24            7        58
 "LAX"      "Los Angeles"   "34:03:21N"  "118:14:23W"         3899           87             20            6        63
 "SJO"      "San José"       "9:55:57N"   "84:04:48W"          352           21             28            8        34
